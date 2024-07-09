@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css_wave_animation.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="sample">
+		<div class="imglayer1"></div>
+        <div class="layer1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 300" width="4800" height="300">
+                <defs>
+                    <path d="M 0,0 
+                            v 50,0 
+                            q 400,-100 800,0 t 800,0
+                            q 400,-100 800,0 t 800,0
+                            q 400,-100 800,0 t 800,0
+                            v 4200,0 Z"id="wave" />
+                </defs>
+                <use xlink:href="#wave"/>
+            </svg>
+        </div>
+        
+        <div class="imglayer2"></div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 300" width="4800" height="300">
+            <defs>
+                <clipPath id="midWave">
+                    <path d="M 0,0 
+                            v 70,0 
+                            q 400,-100 800,0 t 800,0
+                            q 400,-100 800,0 t 800,0
+                            q 400,-100 800,0 t 800,0
+                            v 4200,0 Z"id="wave" />
+                </clipPath>
+            </defs>
+            <use xlink:href="#wave"/>
+        </svg>
+
+        <div class="layer2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 300" width="4800" height="300">
+                <defs>
+                    <path d="M 0,0 
+                            v 50,0 
+                            q 400,100 800,0 t 800,0
+                            q 400,100 800,0 t 800,0
+                            q 400,100 800,0 t 800,0
+                            v 4200,0 Z"id="wave" />
+                </defs>
+                <use xlink:href="#wave"/>
+            </svg>
+        </div>
+	</div>
+</body>
+</html>

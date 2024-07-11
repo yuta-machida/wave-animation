@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
 	<link rel="stylesheet" href="./css/wave_animation.css">
 	<title>Document</title>
 </head>
@@ -10,46 +10,47 @@
 	<div class="sample">
 		<div class="imglayer1"></div>
         <div class="layer1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 300" width="4800" height="300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 500" width="4800" height="500">
                 <defs>
-                    <path d="M 0,0 
-                            v 50,0 
-                            q 400,-100 800,0 t 800,0
-                            q 400,-100 800,0 t 800,0
-                            q 400,-100 800,0 t 800,0
-                            v 4200,0 Z"id="wave" />
+                <path d="M 0,500
+                        v -350
+                        q 400,-150 800,0 t 800,0
+                        q 400,-150 800,0 t 800,0
+                        q 400,-150 800,0 t 800,0
+                        v 350 Z"id="wave1" />
                 </defs>
-                <use xlink:href="#wave"/>
+                <use xlink:href="#wave1"></use>
             </svg>
         </div>
-        
+        <!-- <div class="content">
+            <p>薬理研</p>
+        </div> -->
         <div class="imglayer2"></div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 300" width="4800" height="300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 400" width="4800" height="400">
             <defs>
                 <clipPath id="midWave">
-                    <path d="M 0,0 
-                            v 70,0 
+                    <path d="M 0,400 
+                            v -350
                             q 400,-100 800,0 t 800,0
                             q 400,-100 800,0 t 800,0
                             q 400,-100 800,0 t 800,0
-                            v 4200,0 Z"id="wave" />
+                            v 350 Z"id="wave2" />
                 </clipPath>
             </defs>
-            <use xlink:href="#wave"/>
         </svg>
 
         <div class="layer2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 300" width="4800" height="300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4800 500" width="4800" height="500">
                 <defs>
                     <path d="M 0,0 
-                            v 50,0 
+                            v 300
                             q 400,100 800,0 t 800,0
                             q 400,100 800,0 t 800,0
                             q 400,100 800,0 t 800,0
-                            v 4200,0 Z"id="wave" />
+                            v -300 Z"id="wave3" />
                 </defs>
-                <use xlink:href="#wave"/>
+                <use xlink:href="#wave3"/>
             </svg>
         </div>
 	</div>

@@ -4,18 +4,19 @@
 	box-shadow:0 4px 20px rgba(0, 0, 0, 0.2);
 	margin:0 auto;
 	width:100%;
-	height:800px;
+	height:500px;
 	background-color:#fff;
 }
 
 .imglayer1{
 	width: 100%;
-	height: 50%;
+	height: 30%;
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-repeat: repeat-x;
 	background-image: url(./image/image4.png);
+	background-size: contain;
 	animation: img-slider 13s linear infinite;
 }
 @keyframes img-slider {
@@ -34,14 +35,16 @@
     height: 47.57vw;
     position: absolute;
     left: 0;
-    top: 9.5vw;
+    top: 20%;
 }
 
-	.layer1 svg use {
+	.layer1 svg use{
 		fill:#009E8A;
         will-change: animation;
 		animation:wave linear 7s infinite;
 		position: absolute;
+		height: 100%;
+		left: 0;
 		bottom: 0;
 	}
 
@@ -64,17 +67,12 @@
     background-repeat: repeat-x;
     background-position: left bottom;
     will-change: animation;
-    animation: img-slider2 15s linear infinite;
+    animation: img-slider1 15s linear infinite reverse;
     position: absolute;
     left: 0;
     bottom: 0;
     clip-path: url(#midWave);
     overflow: hidden;
-}
-
-@keyframes img-slider2{
-	from { background-position: 0 0; }
-    to { background-position: -1958px 0; }
 }
 
 #midWave {
@@ -105,10 +103,55 @@
 	animation:wave2 linear 5s infinite;
 }
 @keyframes wave2 {
-from {
-	transform:translate(-25%);
+	from {
+		transform:translate(-25%);
+	}
+	to {
+		transform:translate(-55%);
+	}
 }
-to {
-	transform:translate(-55%);
+
+/* デスクトップ用のスタイル */
+@media screen and (min-width: 1024px) {
+	.sample {
+		height: 800px;
+	}
+	.layer1 {
+		top: 20%;
+		height: 400px; /* デスクトップ用の固定高さ */
+	}
+	.layer2 {
+		bottom: 0%;
+		height: 100px; /* デスクトップ用の固定高さ */
+	}
 }
+
+/* タブレット用のスタイル */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.sample {
+		height: 600px;
+	}
+	.layer1 {
+		top: 15%;
+		height: 300px; /* タブレット用の固定高さ */
+	}
+	.layer2 {
+		bottom: 10%;
+		height: 80px; /* タブレット用の固定高さ */
+	}
+}
+
+/* スマホ用のスタイル */
+@media screen and (max-width: 767px) {
+	.sample {
+		height: 500px;
+	}
+	.layer1 {
+		top: 10%;
+		height: 200px; /* スマホ用の固定高さ */
+	}
+	.layer2 {
+		bottom: 5%;
+		height: 60px; /* スマホ用の固定高さ */
+	}
 }
